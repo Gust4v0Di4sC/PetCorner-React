@@ -63,6 +63,10 @@ Isso executará tanto o servidor React quanto o servidor de API mock (JSON Serve
 - **Aplicação React**: Disponível em [http://localhost:3000](http://localhost:3000)
 - **JSON Server**: Disponível em [http://localhost:3001](http://localhost:3001)
 
+Para fazer o login utilize as credenciais:
+admin@gmail.com
+12345
+
 ## Estrutura de Arquivos
 
 ```bash
@@ -96,10 +100,10 @@ frontend/
 ## Imagens
 
 ### Tela de Login
-![Login Page](./screenshots/login.png)
+![Login Page](./src/assets/login.png)
 
 ### Tela de Cadastro de Cliente
-![Clientes Page](./screenshots/clientes.png)
+![Clientes Page](./src/assets/clientes.png)
 
 ## Contribuição
 
