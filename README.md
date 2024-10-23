@@ -1,70 +1,119 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PetCorner - Sistema de Gerenciamento
 
-## Available Scripts
+Este é o projeto **PetCorner**, um sistema web de gerenciamento voltado para o cadastro de clientes, animais, produtos e serviços de uma pet shop. O sistema é desenvolvido em **React**, com a integração de um servidor de dados local utilizando o **JSON Server**.
 
-In the project directory, you can run:
+## Estrutura do Projeto
 
-### `npm start`
+### Principais Diretórios:
+- **src/components**: Contém os componentes principais da aplicação, divididos por funcionalidade.
+  - **Clientes**: Formulários e visualização de clientes cadastrados.
+  - **Login**: Tela de login do sistema.
+  - **Template**: Componentes de layout, como Header, Footer e Nav.
+- **src/contexts**: Contexto de autenticação e gerenciamento de estado.
+- **src/main**: Arquivos principais como `App.js`, que controla as rotas e estrutura da aplicação.
+- **src/services**: Serviços para comunicação com a API, como `api.js` para interagir com o backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Principais Tecnologias Utilizadas:
+- **React**: Framework JavaScript para criação de interfaces de usuário.
+- **JSON Server**: Utilizado para simular um backend, servindo dados de um arquivo `db.json`.
+- **Axios**: Para fazer requisições HTTP à API.
+- **Lottie**: Animações SVG, ativadas em interações do usuário.
+- **React Router Dom**: Para gerenciamento de rotas da aplicação.
+- **MUI (Material-UI)**: Biblioteca de componentes para estilização.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Funcionalidades
 
-### `npm test`
+- **Cadastro de Clientes**: Permite o registro de clientes, exibindo informações como nome, idade e e-mail.
+- **Autenticação**: Sistema básico de login.
+- **Navegação**: Menu de navegação com opções de clientes, produtos e logout.
+- **Animação Lottie**: Uma animação interativa que é ativada ao passar o mouse sobre o botão de login.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pré-requisitos
 
-### `npm run build`
+Antes de rodar o projeto, certifique-se de ter o **Node.js** e o **npm** (Node Package Manager) instalados.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/PetCorner-React.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd PetCorner-React
+   ```
 
-### `npm run eject`
+3. Instale as dependências do projeto:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Rodando a Aplicação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para rodar o projeto localmente, você pode usar o seguinte comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Isso executará tanto o servidor React quanto o servidor de API mock (JSON Server).
 
-## Learn More
+- **Aplicação React**: Disponível em [http://localhost:3000](http://localhost:3000)
+- **JSON Server**: Disponível em [http://localhost:3001](http://localhost:3001)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Estrutura de Arquivos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── Clientes/
+│   │   │   ├── Form/
+│   │   │   │   ├── form.css
+│   │   │   │   └── Form.jsx
+│   │   │   ├── home/
+│   │   │   │   ├── home.css
+│   │   │   │   └── Home.jsx
+│   │   │   ├── Login/
+│   │   │   │   ├── login.css
+│   │   │   │   └── Login.jsx
+│   │   ├── template/
+│   │       ├── Footer.jsx
+│   │       └── Header.jsx
+│   ├── contexts/
+│   │   └── AuthContext.js
+│   ├── services/
+│   │   └── api.js
+│   ├── main/
+│       ├── App.jsx
+│       └── Routes.jsx
+├── db.json
+└── package.json
+```
 
-### Code Splitting
+## Imagens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Tela de Login
+![Login Page](./screenshots/login.png)
 
-### Analyzing the Bundle Size
+### Tela de Cadastro de Cliente
+![Clientes Page](./screenshots/clientes.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contribuição
 
-### Making a Progressive Web App
+Se desejar contribuir com este projeto, faça um fork e crie uma branch com sua feature:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+git checkout -b minha-feature
+```
 
-### Advanced Configuration
+Depois faça o commit e um pull request para análise:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git push origin minha-feature
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
